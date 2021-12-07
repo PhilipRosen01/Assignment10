@@ -1,0 +1,32 @@
+:host{
+    display: block;
+    border: 1px solid #f00;
+    border-radius:10px;
+    margin: 10px auto;
+    padding: 16px;
+    width: 400px;
+}
+:host.is-last{
+    border: 2px solid #000;
+}
+:host.metal{
+    border: 2px solid #ff00ff;
+}
+:host.power-metal{
+    border: 2px solid #00ffff;
+}
+:host.pop{
+    border: 2px solid #999999;
+}
+:host.highlight-me{
+    background-color: #000;
+    color: #ffff00;
+}
+img{
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+}
+div{
+    text-align: center;
+}

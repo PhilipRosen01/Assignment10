@@ -1,0 +1,26 @@
+<a [ngSwitch]="song.imgUrl" routerLink="content/{{song.id}}">
+    <img *ngSwitchCase="null" src="https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg">
+    <img *ngSwitchDefault (click)="showId()" [src]="song.imgUrl">
+</a>
+
+<!-- <img *ngIf="song.imgUrl" (click)="showId()" [src]="song.imgUrl">
+<img *ngIf="!song.imgUrl" src="https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg"> -->
+<div class="author">
+    <strong>Artist:</strong> {{song.author}}
+</div>
+<div class="title">
+    <strong>Song Title:</strong> <span appHoverStyle hoverStyle="text-decoration">{{song.title}}</span>
+</div>
+<div class="tags" *ngIf="song.tags">
+    <strong>Tags:</strong>
+    <mat-chip-list class="example-chip" cdkDropList cdkDropListOrientation="horizontal"
+        (cdkDropListDropped)="drop($event)">
+        <mat-chip appHoverStyle class="tag" hoverStyle="font-weight" cdkDrag
+            *ngFor="let tag of song.tags; last as isLast">
+            {{tag}}
+        </mat-chip>
+    </mat-chip-list>
+    <!-- <span class="tag" *ngFor="let tag of song.tags; last as isLast">
+        <span appHoverStyle hoverStyle="font-weight">{{ tag }}</span><span *ngIf="!isLast">, </span>
+    </span> -->
+</div>

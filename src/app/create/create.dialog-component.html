@@ -1,0 +1,46 @@
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label>ID</mat-label>
+        <input matInput [(ngModel)]="tempId">
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label>Author</mat-label>
+        <input matInput [(ngModel)]="data.author">
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label>Image URL</mat-label>
+        <input matInput [(ngModel)]="data.imgUrl">
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label>Type</mat-label>
+        <input matInput [(ngModel)]="data.type">
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label>Title</mat-label>
+        <input matInput [(ngModel)]="data.title">
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label>Body</mat-label>
+        <input matInput [(ngModel)]="data.body">
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label>Tags</mat-label>
+        <input matInput [(ngModel)]="tempTags">
+    </mat-form-field>
+</div>
+<div>
+    <button mat-raised-button color="primary" (click)="addCoconut()" [mat-dialog-close]="data">Add Song</button>
+    <button mat-raised-button color="accent" (click)="updateCoconut()">Update Song</button>
+</div>
